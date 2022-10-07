@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+          background-color:grey;
+       }
+       button{
+         background: purple;
+         color: white;
+       }
+       input{
+          border: 1px solid blue;
+          background: white;
+       }
+       input, type{
+          color: black;
+       }
+       
+    </style>
+</head>
+<body>
+    <p id="result"></p>
+    <p><input type="text" id="midterm"></p>
+    <p><input type="text" id="final"></p>
+    <button type="button" onclick="noteResult()">Result</button>
+
+
+    <script>
+      function noteResult(){
+        
+          var midtermNote,finalNote,message,average;
+          midtermNote=Number(document.getElementById('midterm').value);
+          finalNote=Number(document.getElementById('final').value);
+          average=midtermNote*0.3+finalNote*0.7;
+
+             if(isNaN(midtermNote)){
+                message="You have to enter midtermnote as a number.";
+             }else if(isNaN(finalNote)){
+                message="You have to enter finalnote as a number.";
+             }else{
+               // message=(average>=60)?"You passed.":"You failed."; böyle yapilabilir
+               if(average<45){
+                   message="You Failed. Your Result:FF";
+               }else if(average>45 && average<=60){
+                  message="You Passed. Your Result: DD";
+               }else if(average>60 && average<=80){
+                  message="You Passed. Your Result: CC";
+               }else if(average>80 && average<=90){
+                  message="You Passed. Your Result: BB";
+               }else if(average>90 && average<=100){
+                  message="You Passed. Your Result: AA";
+               }else{
+                  message="The entered data is not within the grading system range. Please enter a note between 1 and a 100.";
+               }
+            }
+            document.getElementById('result').innerHTML=message;
+
+             
+      }
+        
+    </script>
+</body>
+</html>

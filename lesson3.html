@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+
+  <script>
+
+     printScreen();
+
+     function printScreen(){
+         var x=128; //onluk 
+         var y=x.toString(16); // hexadecimal 16 li
+         var z=x.toString(8); // octal 8 li
+         var a=x.toString(2); // binary 2 li
+
+         document.getElementById('result').innerHTML="onluk sistem: " + x + "<br>"+
+         "hexa sistem: " + y + "<br>"+
+         "octal sistem: " + z + "<br>"+
+         "binary sistem: " + a + "<br>";
+      }
+
+  </script>  
+</body>
+</html>

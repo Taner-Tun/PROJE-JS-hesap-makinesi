@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+       document.write("ilk java script kodlarim");
+    alert('kodlama');
+
+    
+    
+    
+    
+    </script>
+         
+
+   
+</head>
+<body>
+    
+   <div id="result"  class="test"></div>
+    <div id="result2"></div>
+    <button type="button" onclick="calculate()">Hesapla</button>
+      
+      <script>
+       
+       function langs(i) {
+       var langs=["java script","node js","vue","react","jquery"];
+       var i;
+       for(i=0;i<langs.length;i++);
+       document.getElementById('result').innerHTML += langs[i] + "<br>";
+       }
+       
+
+       function calculate(){
+          
+         var x,y,z;
+         x=5;
+         y=4;
+         z=x*y+x;
+
+        document.getElementById('result').innerHTML="Sonuc:" + z;
+       }
+      
+var car={
+   name:"Nissan",
+   model:"400A", 
+   color:"white",
+   start:function(){
+     
+      return this.name + " " + " " + this.model + " " + this.color + " " + "started.";
+
+   },
+
+   drive:function(){
+      return this.name + " " + " " + this.model + " " + this.color + " " + "driven.";
+   },
+
+   brake:function(){
+      return this.name + " " + " " + this.model + " " + this.color + " " + "broke.";
+   },
+
+   stop:function(){
+      return this.name + " " + " " + this.model + " " + this.color + " " + "stopped.";
+   }
+};
+
+    document.getElementById('result').innerHTML= car.start() + "<br>" + 
+    car.drive() + "<br>" +
+    car.brake() + "<br>" +
+    car.stop() + "<br>";
+
+                   
+</script>
+        
+   
+</body>
+</html>

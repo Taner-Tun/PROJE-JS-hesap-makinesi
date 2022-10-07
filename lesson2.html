@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+  <select id="MySelect" onChange="message();">
+    
+    <option>Php</option>
+    <option>Asp.net</option>
+    <option>JSP</option>
+    <option>Vue</option>
+    <option>React</option>
+    <option>Angular</option> 
+     
+</select>  
+
+<script>
+  function message(){
+  alert("Sanirim bir seyler degisti");
+}
+
+printScreen();
+
+function printScreen(){
+  var text;
+  document.getElementById('result').innerHTML='dunyanin en guclu'
+   + ' devleti turkiyedir'; 
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Toggle Password Show</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" />
+    </head>
+    <body>
+        <form class="ui large form">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui icon input">
+                        <input type="text" name="email" placeholder="E-mail address" />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui icon input">
+                        <input type="password" id="password" name="password" placeholder="Password" /> 
+                        <i class="circular eye link icon" onclick="togglePassword()"></i>
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">Login</div>
+            </div>
+        </form>
+        <script>
+            function togglePassword() {
+                var element = document.getElementById('password');
+                element.type = (element.type == 'password' ? 'text' : 'password');
+            }
+        </script>
+    </body>
+</html>
